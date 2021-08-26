@@ -1,12 +1,15 @@
 from typing import Optional
 
 from pydantic import BaseModel
+from datetime import date
 
 
 # Shared properties
 class ItemBase(BaseModel):
     title: Optional[str] = None
-    description: Optional[str] = None
+    cantidad: Optional[int] = None
+    total: Optional[int] = None
+    fecha: Optional[date] = None
 
 
 # Properties to receive on item creation
